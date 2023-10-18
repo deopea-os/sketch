@@ -1,0 +1,48 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+definitions:
+  - commit-message: &commit-message
+      prefix: "deps(prod)"
+      prefix-development: "deps(dev)"
+      include: "scope"
+
+version: 2
+updates:
+  # @deopea.os daily check
+  - package-ecosystem: "npm" # See documentation for possible values
+    directory: "/" # Location of package manifests
+    commit-message: *commit-message
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-name: "@deopea.os/*"
+
+  # add other directories for daily checks
+  # - package-ecosystem: "npm" # See documentation for possible values
+  #   directory: "/packages/...." # Location of package manifests
+  #   commit-message: *commit-message
+  #   schedule:
+  #     interval: "daily"
+  #   allow:
+  #     - dependency-name: "@deopea.os/*"
+
+  # general weekly check
+  - package-ecosystem: "npm"
+    directory: "/"
+    commit-message: *commit-message
+    schedule:
+      interval: "weekly"
+    ignore:
+      - dependency-name: "@deopea.os/*"
+
+  # add other directories for weekly checks
+  # - package-ecosystem: "npm"
+  #   directory: "/packages/...."
+  #   commit-message: *commit-message
+  #   schedule:
+  #     interval: "weekly"
+  #   ignore:
+  #     - dependency-name: "@deopea.os/*"

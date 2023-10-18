@@ -1,0 +1,62 @@
+{
+  "name": "@deopea.os/blueprint",
+  "version": "1.0.0",
+  "description": "Blueprint for Deopea repositories.",
+  "type": "module",
+  "private": true,
+  "packageManager": "npm",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "lint-staged": "lint-staged",
+    "fmt": "turbo run fmt",
+    "prepare": "is-ci || husky install",
+    "release": "turbo run release",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@deopea.os/commitlint-config": "^2.0.0",
+    "@deopea.os/conventional-changelog": "^2.0.0",
+    "@deopea.os/eslint-config": "^2.0.0",
+    "@deopea.os/prettier-config": "^2.0.0",
+    "@deopea.os/semantic-release-config": "^2.0.0",
+    "@deopea.os/tsconfig": "^2.0.0",
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/git": "^10.0.0",
+    "@types/semantic-release": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "conventional-changelog": "^5.0.0",
+    "conventional-changelog-conventionalcommits": "^7.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-turbo": "^1.0.0",
+    "eslint-plugin-qwik": "^1.0.0",
+    "husky": "^8.0.0",
+    "is-ci": "^3.0.0",
+    "lint-staged": "^15.0.0",
+    "prettier": "^3.0.0",
+    "semantic-release": "^22.0.0",
+    "semantic-release-monorepo": "^7.0.0",
+    "turbo": "^1.0.0",
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deopea-os/blueprint.git"
+  },
+  "author": "David",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deopea-os/blueprint/issues"
+  },
+  "homepage": "https://github.com/deopea-os/blueprint#readme"
+}

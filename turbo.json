@@ -1,0 +1,28 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalEnv": [],
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", "*.d.ts", "*.js", "!release.config.js"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "fmt": {
+      "outputs": [".turbo/.prettier-cache"]
+    },
+    "lint": {
+      "outputs": [".turbo/.eslintcache"]
+    },
+    "release": {
+      "env": [],
+      "outputs": ["package*.json", "CHANGELOG.md"]
+    },
+    "test": {},
+    "test:watch": {
+      "cache": false
+    }
+  }
+}
