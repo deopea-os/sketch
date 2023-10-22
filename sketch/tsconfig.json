@@ -1,0 +1,15 @@
+{
+  "extends": "@deopea.os/tsconfig/qwik",
+  "compilerOptions": {
+    "baseUrl": "src",
+    "outDir": "dist",
+
+    "incremental": true,
+    "isolatedModules": true,
+    "noEmit": true,
+
+    "typeRoots": ["typings"]
+  },
+  "include": ["src", "./*.{ts,js}"],
+  "exclude": ["**/*.stories.{ts,tsx}"]
+}

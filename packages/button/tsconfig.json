@@ -1,0 +1,13 @@
+{
+  "extends": "@deopea.os/tsconfig/qwik.json",
+  "compilerOptions": {
+    "baseUrl": "src",
+    "outDir": "lib",
+    "moduleResolution": "NodeNext",
+
+    "emitDeclarationOnly": false,
+    "incremental": true,
+    "isolatedModules": true,
+  },
+  "include": ["src"],
+}

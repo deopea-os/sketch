@@ -1,0 +1,67 @@
+{
+  "name": "@deopea.sketch/button",
+  "version": "1.0.0",
+  "description": "Button component from the Sketch library",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "exports": {
+    ".": {
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.cjs",
+      "types": "./lib/index.d.ts"
+    },
+    "./button": {
+      "import": "./lib/button.mjs",
+      "require": "./lib/button.cjs",
+      "types": "./lib/button.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "vite build --mode lib",
+    "postbuild": "npm run ship",
+    "prepare": "panda codegen",
+    "ship": "panda ship --outfile lib/panda.buildinfo.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "@builder.io/qwik": "^1.2.13",
+    "@builder.io/vite-plugin-macro": "~0.0.7",
+    "@pandacss/dev": "^0.14.0",
+    "vite": "^4.4.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deopea-os/sketch.git",
+    "directory": "packages/button"
+  },
+  "keywords": [
+    "deopea",
+    "sketch",
+    "deopea.os",
+    "deopea.sketch",
+    "component",
+    "button"
+  ],
+  "author": {
+    "name": "David",
+    "url": "https://github.com/deopea-david"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deopea-os/sketch/issues"
+  },
+  "homepage": "https://github.com/deopea-os/sketch/tree/main/packages/button",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "tsup": "^7.2.0"
+  },
+  "devDependencies": {
+    "vite-plugin-dts": "^3.6.0"
+  }
+}

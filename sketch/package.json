@@ -1,0 +1,66 @@
+{
+  "name": "sketch",
+  "version": "1.0.0",
+  "description": "Component library for all things Deopea",
+  "private": false,
+  "type": "module",
+  "main": "./lib/index.qwik.mjs",
+  "qwik": "./lib/index.qwik.mjs",
+  "types": "./lib-types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.qwik.mjs",
+      "require": "./lib/index.qwik.cjs",
+      "types": "./lib-types/index.d.ts"
+    }
+  },
+  "files": [
+    "lib",
+    "lib-types"
+  ],
+  "scripts": {
+    "build": "qwik build",
+    "build-storybook": "storybook build",
+    "build.lib": "vite build --mode lib",
+    "build.types": "tsc --emitDeclarationOnly",
+    "dev": "vite --mode ssr --host",
+    "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --host --force",
+    "fmt": "prettier --write .",
+    "fmt.check": "prettier --check .",
+    "lint": "eslint \"src/**/*.ts*\"",
+    "prebuild.pandacss": "panda codegen --silent",
+    "prepare": "npm run prebuild.pandacss",
+    "release": "np",
+    "start": "vite --open --mode ssr",
+    "storybook": "storybook dev -p 6006",
+    "test": "echo \"No test specified\" && exit 0",
+    "qwik": "qwik"
+  },
+  "dependencies": {
+    "@deopea.sketch/button": "^1.0.0",
+    "@deopea.sketch/typography": "^1.0.0"
+  },
+  "devDependencies": {
+    "@builder.io/qwik": "1.2.13",
+    "@builder.io/vite-plugin-macro": "~0.0.7",
+    "@pandacss/dev": "^0.14.0",
+    "@storybook/addon-essentials": "7.5.1",
+    "@storybook/addon-interactions": "^7.5.1",
+    "@storybook/addon-links": "7.5.1",
+    "@storybook/blocks": "7.5.1",
+    "@storybook/builder-vite": "7.5.1",
+    "@storybook/html": "7.5.1",
+    "@storybook/html-vite": "7.5.1",
+    "@storybook/testing-library": "^0.2.2",
+    "@types/node": "^20.4.5",
+    "eslint-plugin-storybook": "^0.6.15",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "7.5.1",
+    "storybook-framework-qwik": "0.2.4",
+    "undici": "5.22.1",
+    "vite": "4.4.7",
+    "vite-plugin-dts": "^3.6.0",
+    "vite-tsconfig-paths": "4.2.0"
+  }
+}
