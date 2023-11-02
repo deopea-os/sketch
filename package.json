@@ -34,6 +34,7 @@
     "@deopea.os/prettier-config": "^2.0.1",
     "@deopea.os/semantic-release-config": "^2.0.0",
     "@deopea.os/tsconfig": "^2.0.0",
+    "@material/material-color-utilities": "^0.2.7",
     "@semantic-release/changelog": "^6.0.0",
     "@semantic-release/git": "^10.0.0",
     "@types/node": "^20.0.0",

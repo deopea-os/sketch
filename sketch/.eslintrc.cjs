@@ -5,8 +5,6 @@ module.exports = {
   extends: ["@deopea.os/eslint-config/qwik", "plugin:storybook/recommended"],
   parserOptions: {
     tsconfigRootDir: __dirname,
-    project: [
-      "./tsconfig.json",
-    ],
+    project: ["./tsconfig.json", "./tsconfig.eslint.json"],
   },
 };

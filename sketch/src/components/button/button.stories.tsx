@@ -1,7 +1,5 @@
-import { Button, type ButtonProps } from "@deopea.sketch/button";
 import type { Meta, StoryObj } from "storybook-framework-qwik";
-
-console.log(Button);
+import { Button, type ButtonProps } from "./button.js";
 
 const meta: Meta<ButtonProps> = {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment

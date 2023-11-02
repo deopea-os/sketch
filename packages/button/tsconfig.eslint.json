@@ -1,4 +1,0 @@
-{
-  "extends": "./tsconfig.json",
-  "files": ["panda.config.ts", "vite.config.ts"]
-}
